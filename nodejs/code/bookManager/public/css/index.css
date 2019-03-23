@@ -1,0 +1,44 @@
+body,table{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+    .header{
+        font-size: 24px;
+        margin: 20px 0;
+    }
+    th{
+        height: 50px;
+        font-size: 20px;
+        font-weight: 900
+    }
+    table{
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+    th,td{
+        border-left: 1px solid #000;
+        border-top: 1px solid #000;
+        width: 100px;
+        
+    }
+    td{
+        height: 40px;
+    }
+    a{
+        text-decoration: none;
+        border: 1px solid #00f;
+        padding: 5px;
+        color: #fff;
+        background-color: #00f;
+    }
+    .widthLen{
+        width: 300px;
+    }
+    #addBookForm{
+        display: none;
+    }
+    #addBookForm>input{
+        margin: 5px 0;
+
+    }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html,body{
+            padding:0;
+            margin:0;
+            background-color: skyblue;
+        }
+        #superBox{
+            width: 1100px;
+            height: 450px;
+            border:1px solid blue;
+            margin:50px auto;
+        }
+        .robot{
+            width: 400px;
+            height: 400px;
+            float: left;
+            margin:20px 25px 20px 65px;
+        }
+        .head{
+            width: 230px;
+            height: 105px;
+            background-color: yellowgreen;
+            border-top-left-radius: 105px;
+            border-top-right-radius: 105px;
+            margin: 0 auto;
+        }
+        .head{
+            position: relative;
+        }
+        .head::before,.head::after{
+            width: 30px;
+            height: 30px;
+            border-radius:50%;
+            background-color: #000;
+            content: "";
+            display: block;
+            position: absolute;
+            top:45px;
+        }
+        .head::before{
+            left:50px;
+        }
+        .head::after{
+            right:50px;
+        }
+        .line{
+            position: relative;
+        }
+        .line::before,.line::after{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 40px;
+            border-radius:5px;
+            background-color: yellowgreen;
+            width: 5px;
+            top:-20px;
+            transform-origin: bottom;
+        }
+        .line::before{
+            left:130px;
+            transform:rotate(-25deg)
+        }
+        .line::after{
+            right:130px;
+            transform:rotate(25deg)
+        }
+        .body{
+            width: 230px;
+            height: 180px;
+            background-color: yellowgreen;
+            margin:10px auto 0 auto;
+            position: relative;
+        }
+        .body::before,.body::after{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 180px;
+            border-radius:25px;
+            background-color: yellowgreen;
+            width: 50px;
+            transform-origin: top;
+        }
+        .body::before{
+            left:-60px;
+        }
+        .body::after{
+            right:-60px;
+        }
+        .foot{
+            width: 230px;
+            height: 120px;
+            position: relative;
+            margin:-20px auto;
+        }
+        .foot::before,.foot::after{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 100%;
+            border-radius:20px;
+            background-color: yellowgreen;
+            width: 40px;
+        }
+        .foot::before{
+            left:50px;
+        }
+        .foot::after{
+            right:50px;
+        }
+        *,::before,::after{
+            transition: all 1s;
+        }
+        #superBox:hover .line::after{
+            transform: rotate(50deg);
+        }
+        #superBox:hover .line::before{
+            transform: rotate(-50deg);
+        }
+        #superBox:hover .head{
+            background-color: pink;
+        }
+        #superBox:hover .robot:first-child .head{
+            background-color: #cd7f32;
+        }
+        #superBox:hover .head::after,#superBox:hover .head::before{
+            background-color: red;
+        }
+        #superBox:hover .body{
+            background-color: pink;
+            transform: scale(0.95,0.95);
+        }
+        #superBox:hover .robot:first-child .body{
+            background-color: #cd7f32;
+            transform: scale(1.05,1.05);
+        }
+        #superBox:hover .body::after{
+            transform: rotate(-30deg);
+        }
+        #superBox:hover .body::before{
+            transform: rotate(30deg);
+        }
+        #superBox:hover .foot::after,#superBox:hover .foot::before{
+            transform: scaleY(1.4);
+            background-color: pink;
+        }
+        #superBox:hover .robot:first-child .foot::after,#superBox:hover .robot:first-child .foot::before{
+            background-color: #cd7f32;
+        }
+    </style>
+</head>
+<body>
+<div id="superBox">
+    <div class="robot">
+        <div class="line"></div>
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="foot"></div>
+    </div>
+    <div class="robot">
+        <div class="line"></div>
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="foot"></div>
+    </div>
+</div>
+</body>
+</html>

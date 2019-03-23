@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>heart</title>
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+    <script>
+
+
+        window.onload = function () {
+            const SPEED = 20
+            var a = document.getElementsByTagName("canvas")[0].getContext("2d");
+            function d(b, c, d, g) {
+                var h = f((d - b) / t), i = f((g - c) / t);
+                if (h) { var j = f(e() * h) * t + b; a.C(j + 1, c - 2, t - 1, 4) }
+                if (i) { var k = f(e() * i) * t + c; a.C(b - 2, k + 1, 4, t - 1) }
+            }
+            function m(b, c, g, h) {
+                var i = f((g - b) / t) - 1, j = f((h - c) / t) - 1; if (i && j) {
+                    var k = (f(e() * (i - 1)) + 1) * t + b, l = (f(e() * (j - 1)) + 1) * t + c, n = f(e() * 4); a.F(k, c, 1, o(c - h)); a.F(b, l, o(b - g), 1);
+                    if (n != 0) d(k, c, k, l);
+                    if (n != 1) d(k, l, g, l);
+                    if (n != 2) d(k, l, k, h);
+                    if (n != 3) d(b, l, k, l); m(b, c, k, l); m(k, c, g, l); m(b, l, k, h); m(k, l, g, h)
+                }
+            }
+            c.width = c.height = 201;
+            with (c.style) width = height = innerHeight - 25 + "px";
+            document.body.style.textAlign = "center";
+            var t = 10, M = Math, e = M.random, f = M.floor, o = M.abs, X = Y = 5, I = J = 0; a.C = a.clearRect; a.F = a.fillRect; m(0, 0, 200, 200);
+            a.strokeRect(.5, .5, 200, 200);
+            a.fillStyle = "red";
+            a.fillText("❤", 191, 200);
+            a.fillStyle = "blue";
+            onkeydown = function (a) {
+                I = J = 0;
+                W = a.which;
+                console.log(W)
+                if (W == 87 || W == 38)  // w
+                    J = -1;
+                if (W == 83 || W == 40)  //s
+                    J = 1;
+                if (W == 65 || W == 37) //a
+                    I = -1;
+                if (W == 68 || W == 39)
+                    //d
+                    I = 1
+            };
+            T = 0;
+            S = setInterval(
+                function () {
+                    D = a.getImageData(X + I, Y + J, 1, 1).data;
+                    if (D[0]) {
+                        alert(`${T / 1e3} 破解迷宫`);
+                        clearInterval(S)
+                    } if (!D[3]) {
+                        a.C(X, Y, 1, 1);
+                        X += I;
+                        Y += J;
+                        a.F(X, Y, 1, 1)
+                    } T += SPEED
+                }, SPEED);
+        }
+    </script>
+</body>
+
+</html>

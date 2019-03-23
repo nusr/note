@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Maze</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+      }
+      #solve {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="main"></canvas>
+    <div>
+      <div>
+        <label for="size"></label>Maze Size:</label>
+        <input id="size" type="text" value="20" />
+      </div>
+
+      <button id="solve">Solve maze with bfs</button>
+    </div>
+    <script src="./app.js"></script>
+    <script>
+      let canvas = document.getElementById("main")
+      let ctx = canvas.getContext("2d")
+      const WIDTH = 600
+      const HEIGHT = 600
+      canvas.width = WIDTH
+      canvas.height = HEIGHT
+      let sizeDom = document.getElementById("size")
+      let myMaze = null
+      function generator() {
+        myMaze = new Maze()
+        let genSize = sizeDom.value
+        myMaze.initContents(genSize)
+        myMaze.generator([0, genSize - 1], [0, genSize - 1], genSize)
+        myMaze.initPoints()
+        myMaze.render()
+      }
+
+      generator()
+      document.getElementById("solve").onclick = function() {
+        generator()
+        if (myMaze) {
+          myMaze.clearSolution()
+          myMaze.render()
+        }
+        myMaze.shortestBFS()
+        currentCell = myMaze.start.getPred()
+        function animate() {
+          if (currentCell != myMaze.end) {
+            myMaze.bfsTraverse(currentCell)
+            currentCell = currentCell.getPred()
+            requestAnimationFrame(animate)
+          }
+        }
+        requestAnimationFrame(animate)
+      }
+    </script>
+  </body>
+</html>

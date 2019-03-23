@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ball</title>
+</head>
+
+<body>
+    <canvas id="ball" width="800" height="500" style="border:1px solid #00f"></canvas>
+    <script>
+        var ball = {
+            x: 1000,
+            y: 100,
+            r: 6,
+            g: 2,
+            vy: -15,
+            vx: -4,
+            color: "#000"
+        };
+        var WIDTH = innerWidth - 100;
+        var HEIGHT = innerHeight - 100;
+        console.log(WIDTH);
+        console.log(HEIGHT);
+        window.onload = function() {
+            var dom = document.getElementById("ball");
+            var context = dom.getContext("2d");
+            context.canvas.width = WIDTH;
+            context.canvas.height = HEIGHT;
+            setInterval(
+                function() {
+                    render(context);
+                    update();
+                }, 20);
+        }
+
+        function render(context) {
+            context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+            context.beginPath();
+            context.arc(ball.x, ball.y, ball.r, 0, 2 * Math.PI);
+            context.fillStyle = ball.color;
+            context.closePath();
+            context.fill();
+        }
+
+        function update() {
+            ball.x += ball.vx;
+            ball.y += ball.vy;
+            ball.vy += ball.g;
+            if (ball.y > HEIGHT - ball.r) {
+                ball.y = HEIGHT;
+                ball.vy = -ball.vy * 0.8;
+            }
+            if (ball.y < 0) {
+                ball.y = 0;
+                ball.vy = -ball.vy * 0.5;
+            }
+            if (ball.x < 0) {
+                ball.x = 0;
+                ball.vx = -ball.vx;
+            }
+            if (ball.x > WIDTH - ball.r) {
+                ball.x = WIDTH;
+                ball.vx = -ball.vx;
+            }
+        }
+    </script>
+</body>
+
+</html>

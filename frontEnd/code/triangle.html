@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triangle</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        canvas{
+            display: block;
+            margin:10px auto;
+            border: 1px solid blue;
+        }
+        button{
+            width: 100px;
+            height: 40px;
+            background-color: #00f;
+            color:#fff;
+            border:0;
+            font-size:20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <canvas id="triangle">
+            你的浏览器不支持canvas，请更换浏览器重试！
+        </canvas>
+        <button onclick="main()">改变图形</button>
+    </div>
+    <script type="text/javascript">
+
+            var dom = document.getElementById("triangle");
+            var context = dom.getContext("2d");
+            var WIDTH = 700;
+            var HEIGHT = 480;
+            dom.width = WIDTH;
+            dom.height = HEIGHT;
+            main();
+        function randX(){
+            return Math.floor(Math.random()*WIDTH);
+        }
+        function randY(){
+            return Math.floor(Math.random()* HEIGHT);
+        }
+        function main(){
+            context.clearRect(0,0,WIDTH,HEIGHT);
+            var point = [[randX(),randY()],[randX(),randY()],[randX(),randY()],[randX(),randY()]];
+            var size = 10000;
+            for(var i = 0;i < size;i++){
+                var temp = Math.floor(Math.random() * 3) % 3;
+                point[3][0] = (point[temp][0]  + point[3][0]) / 2;
+                point[3][1] = (point[temp][1]  + point[3][1]) / 2;
+                context.beginPath();
+                 context.fillStyle="skyBlue";
+                context.arc(point[3][0],point[3][1],1,0,Math.PI);
+                context.fill();   
+                context.closePath();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/**
+*替换元素的重置，方便样式的设置
+*/
+input,textarea,video,img,object{
+    box-sizing: border-box;
+}
+
+img{
+    display: inline-block;
+}

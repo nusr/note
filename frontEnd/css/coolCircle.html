@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root {
+            --rule: X;
+            --times: 30;
+        }
+
+        sup:after {
+            content: '\25c9'
+        }
+
+        sub:after {
+            content: '\2234'
+        }
+
+        sub:after,
+        sup:after {
+            color: currentColor;
+            font-family: monospace;
+        }
+
+        #container {
+            position: relative;
+            width: 50vmax;
+            height: 50vmax;
+        }
+
+        #container>* {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform-origin: 0 center;
+            transform: rotate(calc(360deg / var(--count) * var(--n)));
+            color: #333;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            font-size: 42vmax;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script>
+        const container = document.getElementById('container');
+        let style = getComputedStyle(container);
+
+        const rule = style.getPropertyValue('--rule') || 'X';
+        const times = style.getPropertyValue('--times') || 1;
+        let result = rule.repeat(times);
+
+        function pick(tag, n) {
+            return `<${tag} style="color: ${color()}">${n}</${tag}>`;
+        }
+
+        function color() {
+            let colors = ['#FF1654', '#F3FFBD', '#B2DBBF', '#70C1B3', '#247BA0'];
+            return colors[~~(Math.random() * colors.length)]
+        }
+
+        function generate(input) {
+            return input
+                .replace(/X/g, _ => pick('sub', 'Y'))
+                .replace(/Y/g, _ => pick('sup', 'X'))
+        }
+
+        for (let i = 0; i < times; ++i) {
+            result = generate(result);
+        }
+
+        container.innerHTML = result;
+        container.style.setProperty('--count', container.childElementCount);
+
+        [].forEach.call(
+            container.querySelectorAll('#container > *'),
+            (el, i) => el.style.setProperty('--n', i)
+        );
+    </script>
+</body>
+
+</html>

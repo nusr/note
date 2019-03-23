@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>leaf</title>
+    <style>
+        div {
+            text-align: center;
+        }
+        
+        canvas {
+            display: block;
+            margin: 10px auto;
+        }
+        
+        button {
+            width: 100px;
+            height: 40px;
+            background-color: #0094ff;
+            color: #fff;
+            border: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="btn">surprise</button>
+        <canvas id="fraL">
+        你的浏览器不支持canvas，请更换浏览器重试！
+    </canvas>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var con = document.getElementById("fraL");
+        btn.onclick = function() {
+            con.style.borderWidth = "1px";
+            con.style.borderColor = "#0094ff";
+            con.style.borderStyle = "dotted";
+            var cxt = con.getContext("2d");
+            var WIDTH = 1000;
+            var HEIGHT = 500;
+            con.width = WIDTH;
+            con.height = HEIGHT;
+            setInterval(function() {
+                leaf(cxt, 150, 0, false);
+                leaf(cxt, 380, 0, true);
+                leaf(cxt, 650, 0, false);
+                leaf(cxt, 860, 0, true);
+            }, 50);
+        };
+
+        function leaf(cxt, startX, startY, bool) {
+            const size = 1000;
+            var x = 0,
+                y = 0,
+                r, u = 0;
+            for (var i = 0; i < size; i++) {
+                r = Math.floor(Math.random() * 100);
+                if (r < 1) {
+                    x = 0.02;
+                    y = 0.16 * y;
+                } else if (r >= 1 && r < 86) {
+                    u = 0.85 * x + 0.04 * y;
+                    y = -0.04 * x + 0.85 * y + 1.6;
+                    x = u;
+                } else if (r >= 86 && r < 97) {
+                    u = 0.2 * x - 0.26 * y;
+                    y = 0.23 * x + 0.22 * y + 1.6;
+                    x = u;
+                } else {
+                    u = -0.15 * x + 0.28 * y;
+                    y = 0.26 * x + 0.24 * y + 0.44;
+                    x = u;
+                }
+                cxt.beginPath();
+                if (bool) {
+                    cxt.arc(45 * x + startX, startY + 480 - 45 * y, 2, 0, Math.PI, true);
+                } else {
+                    cxt.arc(-(45 * x - startX), startY + 480 - 45 * y, 2, 0, Math.PI, true);
+                }
+                var r = parseInt(Math.random() * 255);
+                r = (r < 16) ? "0" + r.toString(16) : r.toString(16);
+                var g = parseInt(Math.random() * 255);
+                g = (g < 16) ? "0" + g.toString(16) : g.toString(16);
+                var b = parseInt(Math.random() * 255);
+                b = (b < 16) ? "0" + b.toString(16) : b.toString(16);
+                cxt.fillStyle = "#" + r + g + b;
+                cxt.fill();
+            }
+        }
+    </script>
+</body>
+
+</html>

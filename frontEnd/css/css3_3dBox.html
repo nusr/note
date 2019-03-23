@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 600px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin:100px auto;
+            position: relative;
+            transition:all 3s;
+            transform-style:preserve-3d;
+        }
+        .box .item{
+            width: 100%;
+            height: 100%;
+            font-size:130px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+        }
+        .item:nth-child(1){
+            background-color: orange;
+            transform:translateZ(100px);
+
+        }
+        .item:nth-child(2){
+            background-color: blue;
+            transform:translateZ(-100px);
+        }
+        .item:nth-child(3){
+            background-color: pink;
+            transform: rotateY(90deg) translateZ(100px);
+
+        }
+        .item:nth-child(4){
+            background-color: skyblue;
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .item:nth-child(5){
+            background-color: green;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .item:nth-child(6){
+            background-color: yellow;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .box:hover{
+            transform: rotateX(400deg) rotateY(300deg) rotateZ(200deg);
+            /*transform:rotate3d(20,20,20,800deg);*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

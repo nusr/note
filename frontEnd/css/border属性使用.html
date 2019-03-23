@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .icon-menu {
+            width: 120px;
+            height: 20px;
+            border-top: 60px double;
+            border-bottom: 20px solid;
+        }
+
+        .icon-plus {
+            border: 2px dashed;
+            color: #ccc;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        .icon-plus::after,
+        .icon-plus::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+
+        .icon-plus::before {
+            border-top: 4px solid;
+            margin: -2px 0 0 -10px;
+            width: 20px;
+        }
+
+        .icon-plus::after {
+            border-left: 4px solid;
+            margin: -10px 0 0 -2px;
+            height: 20px;
+        }
+
+        .icon-plus:hover {
+            color: #06c;
+        }
+
+        .triangle {
+            width: 0;
+            border: 10px solid;
+            border-color: #f30 transparent transparent;
+        }
+
+        .triangle2 {
+            width: 0;
+            border-width: 10px 20px;
+            border-style: solid;
+            border-color: #f30 #f30 transparent transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- border绘制图标 菜单 -->
+
+
+    <div class="icon-menu"></div>
+    <!-- 绘制加号 -->
+    <div class="icon-plus"></div>
+    <!-- 绘制图标 -->
+    <!-- triangle -->
+    <div class="triangle"></div>
+    <div class="triangle2"></div>
+</body>
+
+</html>

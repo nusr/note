@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            border: 5px dashed #ccc;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<script>
+    document.body.ondragover = function (event) {
+        var event = event || window.event;
+        event.preventDefault();
+    };
+    document.body.ondrop = function (event) {
+        var event = event || window.event;
+        event.preventDefault();
+        console.log(event);
+        var file = event.dataTransfer.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+            document.body.style.background = "url(" + reader.result + ") no-repeat top / cover";
+        };
+    }
+</script>
+</body>
+</html>

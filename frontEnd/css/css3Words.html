@@ -1,0 +1,36 @@
+<!-- 制作浮雕文字
+使用CSS3的text-shadow属性
+text-shadow属性值分别为：
+- 水平阴影偏移值：必需，允许负值
+- 垂直阴影偏移值：必需，允许负值
+- 模糊距离值：可选，不允许负值
+- 阴影颜色：可选
+- none:取消阴影 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮雕文字</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+        div {
+            font-size: 300px;
+            font-weight: 900;
+            /*将文字的颜色与背景设置得一样*/
+            color: gray;
+            margin:100px 0 0 200px;
+        }
+        /*鼠标悬停在页面时，显示文字，制作出浮雕文字*/
+        body:hover div {
+           /*文字的左上是受光面，颜色设置为白色；文字的右下是背光面，颜色设置为黑色*/
+            text-shadow: -1px -1px #fff, 
+            1px 1px #000;
+        }
+    </style>
+</head>
+<body>
+<div>LOVE</div>
+</body>
+</html>

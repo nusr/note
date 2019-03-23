@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style type="text/css">
+/*  4为初始值 */
+#demo1 ol { counter-reset: section 4; list-style-type: none; }
+/*
+-1是每次叠加的梯度
+每个ol后面的li都会添加数字
+*/
+#demo1 ol li { counter-increment: section -1; }
+ /*counters递归添加 数字标点
+ 后面的符号是与后面文字的分隔符,可以是任意符号
+ */
+#demo1 ol li:before { content: counters(section, ".") ' '; }
+</style>
+<div id="demo1">
+    <ol>
+        <li>进口的爽肤水
+            <ol>
+                <li>非进口商</li>
+                <li>非进口商</li>
+                <li>非进口商</li>
+            </ol>
+        </li>
+        <li>进口的爽肤水
+            <ol>
+                <li>非进口商</li>
+                <li>
+                    非进口商
+                    <ol>
+                        <li>咖啡的开发商</li>
+                        <li>咖啡的开发商</li>
+                        <li>咖啡的开发商</li>
+                    </ol>
+                </li>
+                <li>非进口商</li>
+            </ol>
+        </li>
+        <li>进口的爽肤水</li>
+    </ol>
+</div>
+</body>
+</html>

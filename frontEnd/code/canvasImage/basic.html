@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #CanvasImage,
+    #CanvasTwo {
+        border: 1px dashed #999;
+        margin: 0px auto;
+        /*display: block;*/
+    }
+    </style>
+</head>
+
+<body>
+    <canvas id="CanvasImage"></canvas>
+    <canvas id="CanvasTwo"></canvas>
+    <script>
+    let canvas = document.getElementById('CanvasImage'),
+        ctx = canvas.getContext('2d'),
+        canvasTwo = document.getElementById('CanvasTwo'),
+        contextTwo = canvasTwo.getContext('2d');
+    image = new Image(),
+        width = 600,
+        height = 480;
+    window.onload = function() {
+
+        console.dir(canvas)
+        canvas.width = width;
+        canvas.height = height;
+        canvasTwo.width = width;
+        canvasTwo.height = height;
+        image.src = './img4.jpg';
+        console.dir(image);
+        image.onload = function() {
+            ctx.drawImage(image, 0, 0);
+            greyImage();
+        }
+    }
+
+    function blackWhite() {
+        let imgDataOrigin = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        let imgData = imgDataOrigin.data;
+        console.log(imgData);
+        let gap = 13;
+        let pos = [];
+        let x = 0,
+            y = 0,
+            index = 0;
+        for (let i = 0; i < imgData.length; i += 4) {
+            let r = imgData[i + 0],
+                g = imgData[i + 1],
+                b = imgData[i + 2],
+                a = imgData[i + 3];
+            let grey = r * 0.3 + g * 0.59 + b * 0.11
+            if(grey > 255/2){
+                grey = 255;
+            }else {
+                grey = 0;
+            }
+            imgData[i + 0] = imgData[i + 1] = imgData[i + 2] = grey;
+            // imgData[i + 3] = Math.floor(Math.random() * 256);
+        }
+        contextTwo.putImageData(imgDataOrigin, 0, 0);
+
+    }
+    function greyImage(){
+        let imgDataOrigin = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        let imgData = imgDataOrigin.data;
+        console.log(imgData);
+        let gap = 13;
+        let pos = [];
+        let x = 0,
+            y = 0,
+            index = 0;
+        for (let i = 0; i < imgData.length; i += 4) {
+            let r = imgData[i + 0],
+                g = imgData[i + 1],
+                b = imgData[i + 2],
+                a = imgData[i + 3];
+            let grey = r * 0.3 + g * 0.59 + b * 0.11
+            imgData[i + 0] = imgData[i + 1] = imgData[i + 2] = grey;
+            // imgData[i + 3] = Math.floor(Math.random() * 256);
+        }
+        contextTwo.putImageData(imgDataOrigin, 0, 0);
+    }
+    </script>
+</body>
+
+</html>
