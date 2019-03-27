@@ -1,0 +1,56 @@
+yarn global v1.13.0
+info "@angular/cli@7.3.5" has binaries:
+   - ng
+info "@vue/cli@3.5.0" has binaries:
+   - vue
+info "create-poi-app@12.1.2" has binaries:
+   - cpa
+   - create-poi-app
+info "create-react-app@2.1.8" has binaries:
+   - create-react-app
+info "dawn@1.8.0" has binaries:
+   - dn
+   - dawn
+info "documentation@9.3.1" has binaries:
+   - documentation
+info "eslint@5.15.1" has binaries:
+   - eslint
+info "less@3.9.0" has binaries:
+   - lessc
+info "lighthouse@2.9.2" has binaries:
+   - lighthouse
+   - chrome-debug
+info "majestic@1.2.21" has binaries:
+   - majestic
+info "npm@6.9.0" has binaries:
+   - npm
+   - npx
+info "nrm@1.1.0" has binaries:
+   - nrm
+info "rimraf@2.6.3" has binaries:
+   - rimraf
+info "typescript@3.3.3333" has binaries:
+   - tsc
+   - tsserver
+info "umi@2.5.3" has binaries:
+   - umi
+info "vue-cli@2.9.3" has binaries:
+   - vue
+   - vue-init
+   - vue-list
+Done in 2.29s.
+
+C:\Program Files\nodejs
++-- commitizen@3.0.7
++-- conventional-changelog@3.0.6
++-- create-react-app@2.1.5
++-- documentation@9.3.1
++-- dva-cli@0.10.0
++-- expo-cli@2.11.1
++-- jsdoc@3.5.5
++-- npm@6.4.1
++-- react-devtools@3.6.0
++-- react-native-cli@2.0.1
++-- umi@2.5.3
+`-- yarn@1.13.0
+

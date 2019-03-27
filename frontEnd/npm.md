@@ -146,4 +146,7 @@ npm ERR!     C:\Users\admin\AppData\Roaming\npm-cache\_logs\2019-02-14T01_12_16_
 56 error The operation was rejected by your operating system.
 56 error It's possible that the file was already in use (by a text editor or antivirus),
 56 error or that you lack permissions to access it.
+
 ```
+
+- 查看全局安装的依赖包 `npm list -g --depth 0` or `yarn global list --depth=0`
