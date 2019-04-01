@@ -304,3 +304,15 @@ html to docx https://github.com/evidenceprime/html-docx-js
 let temp = `<div data-id="${id}" id="root"></div>`
 let value = document.getElementById('root').getAttribute('data-id')
 ```
+
+1. **||** 进行运算的缺陷
+
+```js
+function getValue(t){
+    return t || 1
+}
+console.log(getValue()) // 1
+console.log(getValue(0)) // 1 错误
+console.log(getValue(1)) // 1
+console.log(getValue(-1)) // -1
+```

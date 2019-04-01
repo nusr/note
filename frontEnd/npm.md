@@ -150,3 +150,5 @@ npm ERR!     C:\Users\admin\AppData\Roaming\npm-cache\_logs\2019-02-14T01_12_16_
 ```
 
 - 查看全局安装的依赖包 `npm list -g --depth 0` or `yarn global list --depth=0`
+
+`./js/globalPackage.txt`

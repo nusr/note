@@ -7,6 +7,7 @@ test.js
 node_modules/
 dist/
 *.7z
+test.md
 *.zip
 /blog/*.md
 npm-debug.log*
