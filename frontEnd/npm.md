@@ -50,7 +50,7 @@
 *   将 markdown 文件编译成树形 html 文件
     *   安装：`cnpm i -g i5ting_toc`
     *   编译：`i5ting_toc -f README.md -o`
-*   npm-check 升级所有依赖包
+*   npm-check  交互式升级所有依赖包
 *   npm
 *   nrm 切换镜像源
 *   nvm 切换 nodejs 版本

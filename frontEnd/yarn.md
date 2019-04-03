@@ -6,54 +6,11 @@
 1. `npm install -g yarn`
 2. 安装程序
 
-## 初始化
 
-- npm init
-- yarn init
+## 好用命令
 
-## 安装包
-
-- npm install xxx --save
-- yarn add xxx
-
-## 移除包
-
-- npm uninstall xxx
-- yarn remove xxx
-
-## 更新包
-
-- npm update xxx
-- yarn upgrade xxx
-
-## 安装开发依赖包
-
-- npm install xxx --save-dev
-- yarn add xxx --dev
-
-## 全局安装
-
-- npm install -g xxx
-- yarn global add xxx
-
-## 设置下载源
-
-- npm config set registry url
-- yarn config set registry url
-
-## 安装所有依赖
-
-- npm install
-- yarn install
-
-## 执行包
-
-- npm run
-- yarn run
-
-## 查看包信息
-
-- `yarn info <webpack>`
+- 交互式升级依赖包 `yarn upgrade-interactive --latest`
+- 打印包的信息 `yarn info <webpack>`
 
 ## npm yarn命令对比
 
