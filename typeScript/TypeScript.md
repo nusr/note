@@ -133,3 +133,12 @@ function hello(person: string) {
 ## ECMASCRIPT 支持情况
 
 *   模板字符串
+
+
+## d.ts 
+
+```
+npm install -g react
+npm install -g react
+dts-gen -m react
+```

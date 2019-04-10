@@ -47,11 +47,14 @@ deleteFolderRecursive('./dist')
 1. 执行命令行命令,无需引入任何第三方包
   
 ```js
-const { exec } = require("child_process")
+const { exec, execSync } = require("child_process")
+//异步执行
 exec(`tsc test.ts`, (error, stdout, stderr) => {
   if (error) {
     console.error(error)
     return
   }
 })
+//同步执行
+execSync('npm run build')
 ```

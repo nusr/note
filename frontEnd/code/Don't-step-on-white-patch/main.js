@@ -37,33 +37,13 @@ function prepareMobile() {
     } else {
         containerWidth = parseInt(documentWidth * 0.95);
         blockWidth = containerWidth / 4;
-        changeTipsPosition();
     }
     // console.log(documentWidth, containerWidth, blockWidth)
     $('#block-container').style.width = containerWidth + 'px';
     $('#block-container').style.height = containerWidth + 'px';
 
 }
-function changeTipsPosition(){
-    $('#tips').style.display = 'none';
-    $('#tips-image').style.display = 'block';
-    $('#tips-image').className = "mobile";
-    $('#tips-image').addEventListener('click',function(){
-        $('#tips').style.display = 'block';
-        $('#tips').style.left = "0px";
-        $('#tips').style.bottom = "0px";
-        $('#tips').style.backgroundColor = "rgba(0,0,0,.8)";
-        $('#tips').style.color = "#fff";
-        $('#tips').style.zIndex = 99999;
-        $('#close-tips').style.display = "block";
-        this.style.display = 'none';
-    });
-    $('#close-tips').addEventListener('click',function(){
-        $('#tips').style.display = 'none';
-        $('#tips-image').style.display = "block";
-        this.style.display = 'none';
-    })
-}
+
 function whichBlock(i) {
     //是否为第一次敲击
     if (!blocks[rows - 1][i]) {

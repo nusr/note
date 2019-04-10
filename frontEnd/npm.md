@@ -152,3 +152,9 @@ npm ERR!     C:\Users\admin\AppData\Roaming\npm-cache\_logs\2019-02-14T01_12_16_
 - 查看全局安装的依赖包 `npm list -g --depth 0` or `yarn global list --depth=0`
 
 `./js/globalPackage.txt`
+
+## 发布 npm 包
+
+1. 登录 `npm login`
+1. 发布包的文件夹（.npmignore 忽略文件） `npm publish .`
+1. 删除发布的包（24小时内）`npm unpublish [package-name] --force`
