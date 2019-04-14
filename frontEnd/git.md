@@ -55,6 +55,16 @@ git commit -m "first commit"
 git push -u origin master
 ```
 
+- 同步 fork
+
+```
+git remote -v
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+```
+
 - 本地仓库关联远程仓库
 
 ```bash

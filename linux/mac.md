@@ -1,7 +1,9 @@
 # mac
 
-## 切换点开头文件的显示掩藏
+[TOC]
 
+## 切换点开头文件的显示掩藏
+z
 显示隐藏文件:defaults write com.apple.finder AppleShowAllFiles Yes && killall Finder
 不显示隐藏文件:defaults write com.apple.finder AppleShowAllFiles NO && killall Finder
 
@@ -21,23 +23,10 @@
 1. 选择**镜像显示器**
 2. 本机显示器亮度调至最暗。
 
-## wine 
+## brew 使用代理
 
-1. 下载 xquartz https://www.xquartz.org/ 安装 ，配置
-2. 下载 wine https://wiki.winehq.org/Download_zhcn  
-3. 说明 https://wiki.winehq.org/MacOS/Building
+`ALL_PROXY=socks5://127.0.0.1:1086 brew update`
 
-```
- Welcome to wine-4.0.
+`ALL_PROXY=socks5://127.0.0.1:1086 brew install gradle`
 
- In order to start a program:
-   .exe: wine program.exe
-   .msi: wine msiexec /i program.msi
 
- If you want to configure wine:
-   winecfg
-
- To get information about app compatibility:
-   appdb Program Name
-
-```

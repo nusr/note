@@ -240,20 +240,3 @@ function TestMeteor(props) {
 export default MeteorWrapper(TestMeteor, COLLECTIONS_LIST.todo);
 ```
 
-
-
-```
-warning antd > create-react-context > fbjs > core-js@1.2.7: core-js@<2.6.5 is no longer maintained. Please, upgrade to core-js@3 or at least to actual version of core-js@2.
-warning dva > react-router-redux@5.0.0-alpha.9: This project is no longer maintained.
-warning umi > umi-build-dev > af-webpack > eslint > file-entry-cache > flat-cache > circular-json@0.3.3: CircularJSON is in maintenance only, flatted is its successor.
-warning umi-plugin-react > umi-plugin-polyfills > core-js@2.6.0: core-js@<2.6.5 is no longer maintained. Please, upgrade to core-js@3 or at least to actual version of core-js@2.
-warning umi-plugin-react > umi-plugin-dva > dva > react-router-redux@5.0.0-alpha.9: This project is no longer maintained.
-warning umi-plugin-react > workbox-webpack-plugin > workbox-build > joi@11.4.0: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
-warning umi-plugin-react > workbox-webpack-plugin > workbox-build > joi > hoek@4.2.1: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
-warning umi-plugin-react > workbox-webpack-plugin > workbox-build > joi > topo > hoek@4.2.1: This version has been deprecated in accordance with the hapi support policy (hapi.im/support). Please upgrade to the latest version to get the best features, bug fixes, and security patches. If you are unable to upgrade at this time, paid support is available for older versions (hapi.im/commercial).
-[3/5] 🚚  Fetching packages...
-[4/5] 🔗  Linking dependencies...
-warning "umi > umi-build-dev > af-webpack > eslint-config-umi > eslint-config-react-app@3.0.8" has incorrect peer dependency "babel-eslint@9.x".
-warning "umi-plugin-react > umi-plugin-dva > babel-plugin-dva-hmr@0.4.1" has unmet peer dependency "redbox-react@1.x".
-warning "umi-plugin-react > umi-plugin-dva > dva-loading@2.1.0-beta.2" has unmet peer dependency "dva-core@^1.1.0".
-```

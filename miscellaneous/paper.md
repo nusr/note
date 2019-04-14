@@ -24,6 +24,10 @@
 [从堆栈角度深入理解 this](http://www.ruanyifeng.com/blog/2018/06/javascript-this.html)
 
 
+## code style
+
+[google code style](https://google.github.io/styleguide/)
+
 
 
 
