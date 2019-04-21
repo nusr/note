@@ -65,12 +65,22 @@ git checkout master
 git merge upstream/master
 ```
 
-- 本地仓库关联远程仓库
-
+- 本地关联远程仓库
+- 
 ```bash
-git remote add origin https://git.coding.net/stevexucoding/ArmyCollegeLibrary.git
+# or create a new repository on the command line
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:nusr/comic.git
+git push -u origin master
+
+# push an existing repository from the command line
+git remote add origin git@github.com:nusr/comic.git
 git push -u origin master
 ```
+
+## gh-pages
 
 ## 标签
 

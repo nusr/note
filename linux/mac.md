@@ -29,4 +29,15 @@ z
 
 `ALL_PROXY=socks5://127.0.0.1:1086 brew install gradle`
 
+## 清除扩展属性
+
+解决双击 html 文件，无法在浏览器打开的问题
+
+```
+// 清除文件
+xattr -c [filename]
+// 清除文件夹
+xattr -rc [directory]
+```
+
 
