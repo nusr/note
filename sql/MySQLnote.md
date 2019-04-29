@@ -20,7 +20,11 @@
 - 停止: net stop MySQL57 **#**(MySQL 服务名）
 - 卸载: sc delete MySQL57d **#**(MySQL 服务名）
 - 登录:mysql [-h MySQL 服务名] -u 用户名 -p
-  mysql -u root -p
+
+```bash
+mysql -u root -p
+admin123456
+```
 - 设置密码：
 
 ```

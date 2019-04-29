@@ -40,4 +40,22 @@ xattr -c [filename]
 xattr -rc [directory]
 ```
 
+## 命令行打开文本编辑
 
+使用：open -a TextEdit settings.xml 参数说明：－a指定应用
+
+open -e settings.xml 参数说明：－e使用文本编辑器打开
+
+open -t settings.xml 参数说明：－t使用默认编辑器打开
+
+## curl 下载文件
+
+```
+curl -o test.mp4 http://youtube.com/aa.mp4
+```
+
+配置代理
+
+```
+curl --proxy socks5://127.0.0.1:1086 -o test.mp4 http://youtube.com/aa.mp4
+```

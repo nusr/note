@@ -28,6 +28,10 @@
 
 [google code style](https://google.github.io/styleguide/)
 
+## guide
+
+https://lucasfcosta.com/2017/07/17/The-Ultimate-Guide-to-JavaScript-Fatigue.html
+
 
 
 

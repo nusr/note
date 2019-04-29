@@ -9,6 +9,7 @@
 3.  删除 known_hosts 文件
 4.  ssh -T git@github.com
 5.  ssh -T git@git.coding.net
+6.  ssh -T git@gitee.com
 
 ## 修改远程仓库
 
@@ -79,6 +80,22 @@ git push -u origin master
 git remote add origin git@github.com:nusr/comic.git
 git push -u origin master
 ```
+
+## 配置代理
+
+设置
+
+```
+git config --global http.proxy http://proxyuser-name:proxy-password@host:port
+```
+
+撤销代理
+
+git config --global --unset http.proxy
+
+查看代理
+
+git config --global --get http.proxy
 
 ## gh-pages
 
