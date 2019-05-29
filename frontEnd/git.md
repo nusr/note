@@ -86,7 +86,7 @@ git push -u origin master
 设置
 
 ```
-git config --global http.proxy http://proxyuser-name:proxy-password@host:port
+git config --global http.proxy http://127.0.0.1:1087
 ```
 
 撤销代理

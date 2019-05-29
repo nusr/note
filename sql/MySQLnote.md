@@ -42,6 +42,7 @@ flush privileges;
   create table 表名称(列声明);
 - 重定向执行脚本
   mysql -D 数据库名 -u root -p < createtable.sql
+- 导出整个数据库 `mysqldump -u root -p comic > comic.sql`
 
 ## 操作
 
@@ -58,3 +59,5 @@ ALTER TABLE students ADD COLUMN birth VARCHAR(10) NOT NULL;--表新增列
 ALTER TABLE students CHANGE COLUMN birth birthday VARCHAR(20) NOT NULL; -- 修改列
 ALTER TABLE students DROP COLUMN birthday;-- 删除列
 ```
+
+- 查看端口 `show global variables like 'port';`

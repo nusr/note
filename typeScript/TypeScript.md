@@ -1,30 +1,21 @@
 # TypeScript
 
-## install
+TypeScript 只会进行静态检查，如果发现有错误，编译的时候就会报错。
+
+## 安装
 
 1.  npm 安装: `npm install -g typescript`
-2.  Visual Studio
 
 ## 编译代码
 
 *   `tsc hello.ts`
 
-## 类型注解
-
-*   为函数或变量添加约束
-*   静态代码分析
-
-```js
-function hello(person: string) {
-    return "hello, " + person;
-}
-```
-
-### 变量类型
+## 变量类型
 
 *   `boolean` : true false
 *   `number` : 都是浮点数
 *   `string` : " ' 模板字符串
+*   `Union Types`: `let myVal:string | number;` 取值为多种类型中的一种
 *   `array` :数组每个元素类型相同
 *   `tuple` : 元组,数组类型可以不必相同
 *   `enum`: 枚举类型默认从`0`开始编号，并且可以由枚举的值得到它的名字
@@ -34,19 +25,17 @@ function hello(person: string) {
 *   `undefined`
 *   `never` : 返回 error 或者没有返回值
 *   `object`
-*   
 
-### 类型断言
+## any
 
-*   类似类型转换
+- 声明一个变量为任意值之后，对它的任何操作，返回的内容的类型都是任意值。
+- 变量如果在声明的时候，未指定其类型，那么它会被识别为任意值类型：
 
 ### 类型推论
 
 *   即类型在哪里，以及如何被推断出来
 *   最佳通用类型
 *   上下文类型
-
-### 类型兼容性
 
 ## enum
 
@@ -60,6 +49,8 @@ function hello(person: string) {
 
 ## interface
 
+* 首字母大写
+* 赋值的时候，变量的形状必须和接口的形状保持一致。
 *   `tsc implements.ts`
 *   接口里面定义的属性键，都要存在
 *   可选属性`?` `interface SquareConfig{color?: string;width?: number}`
@@ -67,6 +58,41 @@ function hello(person: string) {
 *   变量使用`const` 属性使用`readonly`
 *   继承接口 `extends`
 *   接口继承类
+
+```ts
+// 任意属性
+interface Person {
+    name: string;
+    age?: number;
+    [propName: string]: any;
+}
+// 一旦定义了任意属性，那么确定属性和可选属性的类型都必须是它的类型的子集
+let tom: Person = {
+    name: 'Tom',
+    age: 25,
+    gender: 'male'
+};
+// error
+```
+
+## 数组
+
+```ts
+// 1. 方括号
+let arr1:number[] = [1,2]
+// 2. 数组范型
+let arr2 : Array<number> = [1,2]
+// 3. 接口
+interface NumberArray{
+    [index:number]:number;
+}
+let arr3 : NumberArray = [1,2,3]
+// any
+let list : any[] = ['test',12 ,{name: 'steve'}]
+
+// 类数组
+// 内置对象
+```
 
 ## 泛型
 
@@ -81,6 +107,7 @@ function hello(person: string) {
 *   可选参数 `?` 必须放在必须参数后面 可传可不传
 *   默认参数 可传可不传
 *   剩余参数 `...`
+*   重载
 
 ## class
 
@@ -97,48 +124,43 @@ function hello(person: string) {
     *   `static` 静态属性 存在于类本身
 *   抽象类 `abstract` 抽象类中的抽象犯法不包含具体实现并且必须在派生类中实现
 
-## 命名空间
+## 类型断言
 
-*   内部模块
+类似类型转换
+```ts
+// 1.
+<类型>值
 
-## 模块
+// 2.
+值 as 类型
+```
 
-*   外部模块简称
+## 声明文件
 
-## 装饰器
+.d.ts 结尾文件
 
-1.  参数装饰器，然后依次是方法装饰器，访问符装饰器，或属性装饰器应用到每个实例成员。
-1.  参数装饰器，然后依次是方法装饰器，访问符装饰器，或属性装饰器应用到每个静态成员。
-1.  参数装饰器应用到构造函数。
-1.  类装饰器应用到类。
-
-## 三斜线指令
-
-- 三斜线指令是包含单个XML标签的单行注释
-- 仅可放在包含它的文件的最顶端
-- 告诉编译器编译过程要引入的额外文件 `/// <reference path="..." />`
-
-## mixins
-
-## JSX
-
-*   文件后缀`jsx`
-*   jsx 模式
-    | 模式         | 输入     | 输出                       | 输出文件后缀名 |
-    | ------------ | -------- | -------------------------- | -------------- |
-    | preserve     | `<div/>` | `<div/>`                   | .jsx           |
-    | react        | `<div/>` | React.createElement('div') | .js            |
-    | react-native | `<div/>` | `<div/>`                   | .js            |
-
-## ECMASCRIPT 支持情况
-
-*   模板字符串
-
-
-## d.ts 
+```ts
+// jQuery.d.ts
+declare var jQuery: (selector: string) => any;
+```
 
 ```
-npm install -g react
+npm install -g dts-gen
 npm install -g react
 dts-gen -m react
+```
+
+## 类型别名
+
+```ts
+type Name = string;
+type NameResolver = () => string;
+type NameOrResolver = Name | NameResolver;
+function getName(n: NameOrResolver): Name {
+    if (typeof n === 'string') {
+        return n;
+    } else {
+        return n();
+    }
+}
 ```

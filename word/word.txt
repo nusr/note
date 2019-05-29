@@ -6,3 +6,44 @@ plausible
 flaky
 crushingly
 Colosseum
+compendium
+recipes
+inferring
+excessive
+hoisted
+divergences
+latency 
+resilient
+reconcile
+scrum
+idempotent
+leeway
+unravel
+grok
+jargon
+heuristics
+prohibitively
+Overhauling
+akin
+choppy
+scenario
+state
+swath
+enshrine
+twisted
+empirical
+flesh
+granularity
+sloppy
+staple
+stubs
+slimmed
+
+
+
+
+
+
+你好，我在 V2ex 看到贵公司的招聘信息。
+熟悉 React、Vue，工作认真负责。
+开源项目 https://github.com/nusr/hacker-laws-zh 2000+ star。
