@@ -187,3 +187,9 @@ white-space: nowrap;
     ```
 
 1.  css 追踪用户
+
+
+1. 换肤
+
+- 使用 **link rel=alternate** https://www.zhangxinxu.com/wordpress/2019/02/link-rel-alternate-website-skin/
+- 硬核方式 https://habr.com/en/company/yandex/blog/450032/

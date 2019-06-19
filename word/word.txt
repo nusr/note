@@ -38,11 +38,23 @@ sloppy
 staple
 stubs
 slimmed
+curveballs
+cropped
+adoption
 
+jargon
 
-
-
-
+scenario
+ambient
+creepy
+sluggish
+incredible
+humiliating
+cylinder
+sanitizer
+escalates
+wand
+heuristic
 
 你好，我在 V2ex 看到贵公司的招聘信息。
 熟悉 React、Vue，工作认真负责。

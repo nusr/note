@@ -29,6 +29,23 @@ git remote add origin [url]
 1.  拉取 `git fetch upstream`
 1.  合并 `git merge upstream/dev`
 
+## gitFlow
+
+```
+git pull --rebase origin master
+
+// 代码冲突
+// 解决冲突后
+
+git add [file-name]
+git rebase --continue
+
+// 解决冲突失败，回到 git pull --rebase origin master 命令前
+
+git rebase --abort
+
+```	
+
 ## git diff
 
 - 比较上次提交 commit 和上上次提交 `git diff HEAD^ HEAD`

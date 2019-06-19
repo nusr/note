@@ -49,4 +49,7 @@
 
 - [写博客的好处](https://andrewchen.co/professional-blogging/)
 
+## react
+
+- [React Fiber](https://zhuanlan.zhihu.com/p/20346379)
 

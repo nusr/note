@@ -316,3 +316,13 @@ console.log(getValue(0)) // 1 错误
 console.log(getValue(1)) // 1
 console.log(getValue(-1)) // -1
 ```
+
+1. 前端错误记录到后端
+
+```js
+function logError(sev, msg){
+        var img = new Image();
+        img.src = "log.php?sev=" + encodeURIComponent(sev) + "&msg=" +
+                  encodeURIComponent(msg);
+}
+```
