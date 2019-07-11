@@ -2,15 +2,6 @@
 
 - [测试的好处](http://sd.jtimothyking.com/2006/07/11/twelve-benefits-of-writing-unit-tests-first/)
 
-- [单元测试与集成测试的区别1](https://stackoverflow.com/questions/4904096/whats-the-difference-between-unit-functional-acceptance-and-integration-test)
-
-- [单元测试与集成测试的区别2](https://stackoverflow.com/questions/10752/what-is-the-difference-between-integration-and-unit-tests)
-
-- [微服务测试](https://martinfowler.com/articles/microservice-testing/)
-
-- [mock 与 stub 的区别](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub)
-
-- [怎么测试私有方法](https://stackoverflow.com/questions/105007/should-i-test-private-methods-or-only-public-ones)
 
 - [为什么要写单元测试](https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d)
 
@@ -32,6 +23,7 @@
 ## guide
 
 - [js 疲倦指南](https://lucasfcosta.com/2017/07/17/The-Ultimate-Guide-to-JavaScript-Fatigue.html)
+- [编程观念](https://stackoverflow.com/questions/406760/whats-your-most-controversial-programming-opinion)
 
 ## react
 
@@ -52,4 +44,13 @@
 ## react
 
 - [React Fiber](https://zhuanlan.zhihu.com/p/20346379)
+
+## Event Loop
+
+- [从event loop规范探究javaScript异步及浏览器更新渲染时机](https://github.com/aooy/blog/issues/5)
+- [https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/?utm_source=html5weekly](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/?utm_source=html5weekly)
+
+## 安全
+
+- [关于XSS（跨站脚本攻击）和CSRF（跨站请求伪造）](https://cnodejs.org/topic/50463565329c5139760c34a1)
 
