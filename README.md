@@ -1,101 +1,52 @@
-## 静态 blog
+# testing
 
-1. Hugo go
-1. jkeyll  ruby
-1. hexo   js
-1. vuepress vue
-1. gatsby.js react
-1. react-static react
+- [测试的好处](http://sd.jtimothyking.com/2006/07/11/twelve-benefits-of-writing-unit-tests-first/)
+- [为什么要写单元测试](https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d)
 
-## API DOC
+# google
 
-1. javaScript
-    - [esdoc](https://github.com/esdoc/esdoc)
-    - [jsdoc](https://github.com/jsdoc3/jsdoc)
-1. TypeScript
-    - [typedoc](https://github.com/TypeStrong/typedoc)
-    - [tsdoc](https://github.com/Microsoft/tsdoc)
-1. swagger
-1. [https://github.com/OpenAPITools/openapi-generator](https://github.com/OpenAPITools/openapi-generator)
+- [google 高级搜索](https://ahrefs.com/blog/google-advanced-search-operators/)
 
+# javascript
 
+- [从 js 角度深入理解 this](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/)
 
-## 配置
+- [从堆栈角度深入理解 this](http://www.ruanyifeng.com/blog/2018/06/javascript-this.html)
+- [Html attribute 和 Dom Property 的区别](https://www.cnblogs.com/elcarim5efil/p/4698980.html)
+- [React Fiber](https://zhuanlan.zhihu.com/p/20346379)
+- [从 event loop 规范探究 javaScript 异步及浏览器更新渲染时机](https://github.com/aooy/blog/issues/5)
+- [https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/?utm_source=html5weekly](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/?utm_source=html5weekly)
+- [jsx 的介绍](https://jasonformat.com/wtf-is-jsx/)
 
-1. [json](http://json.org/)
-1. [yaml](https://yaml.org/)
+## code style
 
+- [google code style](https://google.github.io/styleguide/)
 
-## SPA
+## guide
 
-## ES6+
-
-## 状态管理
-
-1. React
-    - redux
-    - flux
-    - mobx
+- [js 疲倦指南](https://lucasfcosta.com/2017/07/17/The-Ultimate-Guide-to-JavaScript-Fatigue.html)
+- [编程观念](https://stackoverflow.com/questions/406760/whats-your-most-controversial-programming-opinion)
 
 
-## css
+## open source
 
-- CSS Modules
+- [curl](https://stackoverflow.com/questions/55884514/what-is-the-incentive-for-curl-to-release-the-library-for-free)
 
-## coding style
+## 通用
 
-## 可维护性
+- [如何编写简单程序](https://medium.com/javascript-scene/the-single-biggest-mistake-programmers-make-every-day-62366b432308)
 
-1. 测试 
-    - unit test: jest ava karama
-    - e2e: enzyme
-2. js lint
-    - eslint
-3. css lint
-    - stylelint
-4. 格式化
-    - prettier
-5. 类型检查
-    - flow
-    - typeScript
-1. java lint
-    - [https://github.com/checkstyle/checkstyle](https://github.com/checkstyle/checkstyle)
+## 写作
 
-## 打包
+- [写博客的好处](https://andrewchen.co/professional-blogging/)
 
-1. Webpack
-2. Rollup
-3. Parcel
-4. Browserify
+## 安全
 
-## 包管理器
+- [关于 XSS（跨站脚本攻击）和 CSRF（跨站请求伪造）](https://cnodejs.org/topic/50463565329c5139760c34a1)
 
-1. Npm
-1. Yarn
-2. Cnpm
+## 杂项
 
-## 持续集成
-
-1. Travis
-2. Jenkins
-3. CircleCI
-4. Gitlab CI/CD
-
-## CDN
-
-## 部署
-
-1. Ansible
-2. Jenkins
-
-## 监控
-
-1. Sentry
-2. js https://github.com/huruji/mini-web-monitor
-
-## 安全性
-
-常说的网络安全其实应该包括以下三方面的安全：
-1、机密性，比如用户的隐私被窃取，帐号被盗，常见的方式是木马。
-2、完整性，比如数据的完整，举个例子，康熙传位十四子，被当时四阿哥篡改遗诏：传位于四子，当然这是传说，常见的方式是XSS跨站脚本攻击和csrf跨站请求伪造。
-3、可用性，比如我们的网络服务是否可用，常用的攻击方式是dos和ddos，拒绝服务和分布式拒绝服务攻击。
+- [超美建筑画](http://www.mathewborrett.com/)
+- [金庸小说地图](https://www.ageeye.cn/map/12518)
+- [画画逼真的技巧](https://www.scotthyoung.com/blog/2019/04/17/7-realistic-drawing-skills/)
+- [测词汇量网站](http://testyourvocab.com/)
