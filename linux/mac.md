@@ -33,7 +33,7 @@ z
 
 解决双击 html 文件，无法在浏览器打开的问题
 
-```
+```bash
 // 清除文件
 xattr -c [filename]
 // 清除文件夹
@@ -50,12 +50,39 @@ open -t settings.xml 参数说明：－t使用默认编辑器打开
 
 ## curl 下载文件
 
-```
+```bash
 curl -o test.mp4 http://youtube.com/aa.mp4
 ```
 
 配置代理
 
-```
+```bash
 curl --proxy socks5://127.0.0.1:1086 -o test.mp4 http://youtube.com/aa.mp4
+```
+
+## Alias
+
+```bash
+# javascript
+
+alias nis="npm i --save"
+alias nid="npm i --save-dev"
+alias nig="npm i -g"
+alias ns="npm run start"
+alias nt="npm run test"
+alias nb="npm run build"
+alias yuil="yarn upgrade-interactive --latest"
+alias ncu="npm-check -u"
+
+# git
+
+alias gcb="git checkout -b"
+alias gpom="git push origin master"
+alias gpomf="git push origin master --force"
+alias gpof="git push origin --force"
+
+# trash-cli
+
+alias tp="trash-put"
+alias tl="trash-list"
 ```
