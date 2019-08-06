@@ -1,3 +1,9 @@
+# Nginx
+
+
+## 基础配置
+
+
 ```nginx
 
 #user  nobody;
@@ -32,7 +38,6 @@ http {
     keepalive_timeout  65;
 
     #gzip  on;
-    # 静态资源压缩
     gzip on;
     gzip_min_length  500;
     gzip_proxied     any;
@@ -49,21 +54,24 @@ http {
         #access_log  logs/host.access.log  main;
 
         location / {
-            root   html;
+        root   html;
             index  index.html index.htm;
+        # resolve refresh page get 404
+        # just for SPA
+            try_files $uri $uri/ /index.html;
         }
 
-		location ~ ^/mock/.*$ {
+        location ~ ^/mock/.*$ {
             proxy_pass http://localhost:3000;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "Upgrade";
-            # 改写路径  /mock/login  -->  http://localhost:3000/login
-            rewrite  /mock/(.*)$ /$1 break; 
+        # /mock/login ---> http://localhost:3000/login
+            rewrite  /mock/(.*)$ /$1 break;
         }
-		location ~ ^/v1/.*$ {
-			# /v1/login --> https://www.test.com/v1/login
-            proxy_pass https://www.test.com;
+        location ~ ^/v1/.*$ {
+        # /v1/login ---> https://a40a0bcb39a4811e98bf30a2be407f66-721432989.ap-northeast-1.elb.amazonaws.com/v1/login
+            proxy_pass https://a40a0bcb39a4811e98bf30a2be407f66-721432989.ap-northeast-1.elb.amazonaws.com;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "Upgrade";

@@ -44,6 +44,10 @@
 
 - [关于 XSS（跨站脚本攻击）和 CSRF（跨站请求伪造）](https://cnodejs.org/topic/50463565329c5139760c34a1)
 
+## HTTP
+
+- [HTTP 请求头完全指南](https://nullsweep.com/http-security-headers-a-complete-guide/)
+
 ## 杂项
 
 - [超美建筑画](http://www.mathewborrett.com/)
