@@ -47,6 +47,18 @@ TypeScript 只会进行静态检查，如果发现有错误，编译的时候就
 *   常量枚举 `const`
 *   外部枚举 `declare`
 
+```ts
+enum LogLevel {
+    ERROR, WARN, INFO, DEBUG
+}
+
+/**
+ * This is equivalent to:
+ * type LogLevelStrings = 'ERROR' | 'WARN' | 'INFO' | 'DEBUG';
+ */
+type LogLevelStrings = keyof typeof LogLevel;
+```
+
 ## interface
 
 * 首字母大写
