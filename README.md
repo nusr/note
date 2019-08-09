@@ -18,6 +18,7 @@
 - [https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/?utm_source=html5weekly](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/?utm_source=html5weekly)
 - [jsx 的介绍](https://jasonformat.com/wtf-is-jsx/)
 
+
 ## code style
 
 - [google code style](https://google.github.io/styleguide/)
@@ -54,3 +55,13 @@
 - [金庸小说地图](https://www.ageeye.cn/map/12518)
 - [画画逼真的技巧](https://www.scotthyoung.com/blog/2019/04/17/7-realistic-drawing-skills/)
 - [测词汇量网站](http://testyourvocab.com/)
+
+- [检测隐身模式](https://mishravikas.com/articles/2019-07/bypassing-anti-incognito-detection-google-chrome.html)
+- [检测无头浏览器](https://news.ycombinator.com/item?id=20480915)
+
+https://mitchum.blog/how-to-build-minesweeper-with-javascript/
+
+
+https://www.plainlanguage.gov/guidelines/words/use-simple-words-phrases/
+
+https://www.c82.net/twining/plants/
