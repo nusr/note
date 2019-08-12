@@ -65,3 +65,7 @@ https://mitchum.blog/how-to-build-minesweeper-with-javascript/
 https://www.plainlanguage.gov/guidelines/words/use-simple-words-phrases/
 
 https://www.c82.net/twining/plants/
+
+https://coolshell.cn/articles/9666.html
+
+https://coolshell.cn/articles/11312.html
