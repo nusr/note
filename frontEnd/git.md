@@ -98,6 +98,19 @@ git remote add origin git@github.com:nusr/comic.git
 git push -u origin master
 ```
 
+- clone 所有远程分支
+
+```bash
+# 运行 git clone 后，运行下面命令
+git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+```
+
+- 更新所有本地分支
+
+```bash
+git fetch --all
+```
+
 ## 配置代理
 
 设置
