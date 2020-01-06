@@ -6,6 +6,8 @@ test.js
 .DS_Store
 node_modules/
 dist/
+*/node_modules
+*/package-lock.json
 *.7z
 test.md
 *.zip
@@ -13,6 +15,7 @@ test.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*/yarn.lock
 *.class
 # Editor directories and files
 .idea
